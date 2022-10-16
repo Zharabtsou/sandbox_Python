@@ -22,3 +22,6 @@ print(guest_name)
 # remove удаление элемента из списка по значению
 guest_name.remove('Andrey')
 print(guest_name)
+
+
+print(guest_name.clear())
