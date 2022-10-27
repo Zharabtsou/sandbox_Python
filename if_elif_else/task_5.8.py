@@ -18,13 +18,8 @@ while True:
 
     if var == 1:
         user = input('Введите имя нового пользователя: ')
-        if user.lower() not in list_user:
-            list_user.append(user)
-            user_password = input('Введите пароля: ')
-            list_password.append(user_password)
-            continue
-        else:
-            print('ВНИМАНИЕ такой пользователь с таким именем уже есть')
+
+
 
 
 
