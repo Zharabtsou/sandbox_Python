@@ -25,7 +25,7 @@ while True:
         else:
             print('Пользователь с таким именем уже есть')
 
-    if var == 2:
+    elif var == 2:
         id = 0
         del_user = input('введите имя пользователя которого вы хотите УДАЛИТЬ: ')
         if del_user.lower() in list_user:
@@ -47,7 +47,7 @@ while True:
         else:
             print(f'пользователя с именем "{del_user.title()}" не существует')
 
-    if var == 3:
+    elif var == 3:
         id = 0
         login_user = input('введите имя пользователя для входа: ')
         if login_user.lower() in list_user:
@@ -67,10 +67,10 @@ while True:
         else:
             print(f'пользователя с именем "{login_user.title()}" не существует')
 
-    if var == 4:
+    elif var == 4:
         print('Спасибо за работу досвидание')
         break
 
-    if var == 5:
+    else:
         print(list_user)
         print(list_password)
