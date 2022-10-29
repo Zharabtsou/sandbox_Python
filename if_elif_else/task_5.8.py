@@ -48,12 +48,28 @@ while True:
             print(f'пользователя с именем "{del_user.title()}" не существует')
 
     if var == 3:
-
+        id = 0
+        login_user = input('введите имя пользователя для входа: ')
+        if login_user.lower() in list_user:
+            for item in list_user:
+                if item != login_user.lower():
+                    id += 1
+                else:
+                    item_pass = 0
+                    while item_pass < 3:
+                        login_password = input('введите пароль пользователя для удаления: ')
+                        if list_user[id] == login_user.lower() and list_password[id] == login_password:
+                            print(f'Добро пожаловать {login_user.title()} !!!')
+                            item_pass = 4
+                        else:
+                            print('не верный пароль попытайтесь еще')
+                            item_pass += 1
+        else:
+            print(f'пользователя с именем "{login_user.title()}" не существует')
 
     if var == 4:
         print('Спасибо за работу досвидание')
         break
-
 
     if var == 5:
         print(list_user)
