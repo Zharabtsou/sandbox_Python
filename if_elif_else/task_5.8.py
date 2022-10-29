@@ -39,13 +39,13 @@ while True:
                         if list_user[id] == del_user.lower() and list_password[id] == del_password:
                             list_user.pop(id)
                             list_password.pop(id)
-                            print(f'пользователь с именем {del_user} был удален')
+                            print(f'пользователь с именем {del_user.title()} был удален')
                             item_pass = 4
                         else:
                             print('не верный пароль попытайтесь еще')
                             item_pass += 1
         else:
-            print(f'пользователя с именем "{del_user}" не существует')
+            print(f'пользователя с именем "{del_user.title()}" не существует')
 
     if var == 3:
 
