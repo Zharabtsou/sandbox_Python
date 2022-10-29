@@ -18,31 +18,36 @@ while True:
 
     if var == 1:
         user = input('Введите имя нового пользователя: ')
-
-
-
-
+        if user.lower() not in list_user:
+            list_user.append(user.lower())
+            password = input('Введите пароль: ')
+            list_password.append(password)
+        else:
+            print('Пользователь с таким именем уже есть')
 
     if var == 2:
         id = 0
         del_user = input('введите имя пользователя которого вы хотите УДАЛИТЬ: ')
-        if del_user in list_user:
+        if del_user.lower() in list_user:
             for item in list_user:
-                if item != del_user:
+                if item != del_user.lower():
                     id += 1
                 else:
                     item_pass = 0
                     while item_pass < 3:
                         del_password = input('введите пароль пользователя для удаления: ')
-                        if list_user[id] == del_user and list_password[id] == del_password:
+                        if list_user[id] == del_user.lower() and list_password[id] == del_password:
                             list_user.pop(id)
                             list_password.pop(id)
                             print(f'пользователь с именем {del_user} был удален')
+                            item_pass = 4
                         else:
                             print('не верный пароль попытайтесь еще')
                             item_pass += 1
         else:
             print(f'пользователя с именем "{del_user}" не существует')
+
+    if var == 3:
 
 
     if var == 4:
