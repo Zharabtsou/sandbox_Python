@@ -19,5 +19,7 @@ human_03 = {
 people = [human_01, human_02, human_03]
 
 for item in people:
-    print(item.values())
+    for key, info in item.items():
+        print(f'{key}:{info.title()}')
 
+    print()
