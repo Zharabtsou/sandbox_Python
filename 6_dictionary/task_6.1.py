@@ -21,3 +21,7 @@ print()
 # get полезен тем что при отсутсвии такого ключа или значения в ключе можно прописать что вывести или вывести значение по умолчанию "None"
 print(human.get('ceti'))
 print(human.get('ceti', 'ceti!!!'))
+
+human['status'] = 'father'
+
+print(human)
