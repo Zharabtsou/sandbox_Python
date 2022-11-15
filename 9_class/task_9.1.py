@@ -5,7 +5,11 @@ class Restaurant():
         self.cuisine_type = cuisine_type
 
     def descride_restaurant(self):
-        pass
+        print(f'Название ресторана {self.restaurant_name}')
+        print(f'время работы {self.cuisine_type}')
 
     def open_restaurant(self):
-        pass
+        print(f'ресторан {self.restaurant_name} открыт')
+
+
+
