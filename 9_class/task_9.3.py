@@ -29,9 +29,14 @@ class ElectricCar(Car):
 car1 = Car('Audi', 'C8', 2015)
 print(car1.get_descriptive_name())
 car1.read_odometer_reading()
+car1.increment_odometer(500)
+car1.read_odometer_reading()
+
 car2 = ElectricCar('tesla', 'T2', 2020)
 print(car2.get_descriptive_name())
 car2.read_odometer_reading()
 car2.battery_size(5500)
 car2.geet_battery()
+car2.increment_odometer(1000)
+car2.read_odometer_reading()
 
