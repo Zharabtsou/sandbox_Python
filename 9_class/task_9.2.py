@@ -14,6 +14,15 @@ class User():
     def greet_user(self):
         print(f'\nHellow {self.first_name}')
 
+    def user_telefon(self, telefon):
+        self.telefon = telefon
+
+    def greet_telefon(self):
+        print(f'телефон: {self.telefon}')
+
+    def update_telefon(self, tel):
+        self.telefon = tel
+
 
 user1 = User('Андрей', 'Жеребцов', '32', 'BY')
 user2 = User('Алексей', 'Лукомский', '33', 'RU')
@@ -27,3 +36,8 @@ user2.user_info()
 
 user3.greet_user()
 user3.user_info()
+
+user1.user_telefon('+375447774422')
+user1.greet_telefon()
+user1.user_telefon('+375449998899')
+user1.greet_telefon()
