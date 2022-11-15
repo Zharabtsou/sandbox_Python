@@ -23,8 +23,14 @@ class User():
     def update_telefon(self, tel):
         self.telefon = tel
 
+    def user_age(self, age_update):
+        self.age += age_update
 
-user1 = User('Андрей', 'Жеребцов', '32', 'BY')
+    def greet_age(self):
+        print(f'возвраст {self.age}')
+
+
+user1 = User('Андрей', 'Жеребцов', 32, 'BY')
 user2 = User('Алексей', 'Лукомский', '33', 'RU')
 user3 = User('Александр', 'Кряжев', '30', 'BY')
 
@@ -41,3 +47,6 @@ user1.user_telefon('+375447774422')
 user1.greet_telefon()
 user1.user_telefon('+375449998899')
 user1.greet_telefon()
+user1.greet_age()
+user1.user_age(10)
+user1.greet_age()
