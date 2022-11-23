@@ -1,8 +1,10 @@
 filename = 'program.txt'
 
-with open(filename, 'w') as file_object:
-    masseg = int(input('Введите число: '))
-    str_masseg = str(masseg)
-    file_object.write(str_masseg)
+with open(filename, 'a') as file_object:
+    masseg = ''
+    while masseg != 'quit':
+        if masseg != 'quit':
+            file_object.write(f'{masseg}\n')
+        masseg = input('Введите сообщение: ')
 
 print('The end')
