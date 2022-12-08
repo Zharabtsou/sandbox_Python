@@ -2,7 +2,7 @@ import json
 
 def get_stored_username():
     """Получает храниемое имя пользователя если оно существует"""
-    filename = 'task_10_13_username.json'
+    filename = 'username.json'
     try:
         with open(filename) as f:
             username = json.load(f)
@@ -19,7 +19,7 @@ def get_new_username():
         json.dump(username, f)
     return username
 
-def greet_user(name):
+def greet_user():
     '''Приветсвует пользователя по именни'''
     username = get_stored_username()
     if username:
@@ -28,3 +28,9 @@ def greet_user(name):
         username = get_new_username()
         print(f'Мы тебя запомним если ты вернешся, {username}!')
 
+name = get_stored_username()
+answer = input(f'Вас десйтвительно зовут {name}? y или n? ').lower()
+if answer != ('n' or 'not'):
+    greet_user()
+else:
+    get_new_username()
