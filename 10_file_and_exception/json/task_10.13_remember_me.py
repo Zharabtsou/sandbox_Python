@@ -17,6 +17,7 @@ def get_new_username():
     filename = 'username.json'
     with open(filename, 'w') as f:
         json.dump(username, f)
+    print(f'система запомнила тебя {username}')
     return username
 
 def greet_user():
