@@ -7,8 +7,8 @@ class NameTestCase(unittest.TestCase):
 
     def test_city_country_population(self):
         '''название 'Buda Bellarus million' работает правильно? '''
-        city_country = get_city_country('buda', 'bellarus', 'million')
-        self.assertEqual(city_country, 'Buda Bellarus Million')
+        city_country = get_city_country('buda', 'bellarus', '5500')
+        self.assertEqual(city_country, 'Buda Bellarus 5500')
 
 
     def test_city_country(self):
