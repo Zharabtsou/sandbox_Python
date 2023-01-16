@@ -17,22 +17,29 @@ class AlienInvasion:
         #назначаем цвет фона
         self.bg_color = (self.settings.bg_color)
 
-        self.ship = Ship(screen)
+        self.ship = Ship(self) #!!! в книге помарка вместо screen self
 
     def run_game(self):
         """запуск основного цикла игры"""
         while True:
             # Отслежиавание событий клавиатуры игры.
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    sys.exit()
+            self._check_events()
+            self._update_screen()
 
-            # При каждом проходе цикла перерисовывается экран
-            self.screen.fill(self.bg_color)
-            self.ship.blitme()
+    def _check_events(self):
+        # Отслежиавание событий клавиатуры игры.
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
 
-            # Отоброжение последнего прикосновения экрна.
-            pygame.display.flip()
+    def _update_screen(self):
+        """Обновление изображения на экране и отображает новый экран"""
+        # При каждом проходе цикла перерисовывается экран
+        self.screen.fill(self.settings.bg_color)
+        self.ship.blitme()
+
+        # Отоброжение последнего прикосновения экрна.
+        pygame.display.flip()
 
 if __name__ == '__main__':
     # Создание экземпляра и запуска игры
